@@ -8,6 +8,7 @@ public class MouseLook : MonoBehaviour
     [SerializeField] private float mouseSensitivity = 100f;
 
     [SerializeField] private Transform playerBody;
+    [SerializeField] private Transform shotgun;
 
     private float xRotation = 0f;
 
@@ -28,5 +29,6 @@ public class MouseLook : MonoBehaviour
 
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         playerBody.Rotate(Vector3.up * mouseX);
+        shotgun.Rotate(Vector3.left * mouseY);
     }
 }

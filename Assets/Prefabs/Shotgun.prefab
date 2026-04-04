@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6aff724beb481d34592eb817b68c3414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShotgunController
-  pellet: {fileID: -4321324224184536638, guid: c28cfd45817689b41ac3971dbebbe7b2, type: 3}
   bulletSpawn: {fileID: 4548296749236997505}
   bulletSpread: 5
-  range: 50
+  pelletCount: 10
+  pumpDelay: 2.5

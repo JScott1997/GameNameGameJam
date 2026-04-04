@@ -481,7 +481,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.4939697, y: 4.2, z: 9.06}
-  m_LocalScale: {x: 1, y: 11.84, z: 1}
+  m_LocalScale: {x: 8.541373, y: 11.84, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -598,6 +598,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1598415415 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5525275678910644263, guid: a483cb9263b3b1342bd7299c80c42be4, type: 3}
+  m_PrefabInstance: {fileID: 1838003376185040945}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1838003376185040945
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -610,6 +615,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: First Person Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4502208426853611845, guid: a483cb9263b3b1342bd7299c80c42be4, type: 3}
+      propertyPath: shotgun
+      value: 
+      objectReference: {fileID: 1598415415}
     - target: {fileID: 6857384601583602378, guid: a483cb9263b3b1342bd7299c80c42be4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
