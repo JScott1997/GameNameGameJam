@@ -5,17 +5,17 @@ using UnityEngine;
 
 public class BulletController : MonoBehaviour
 {
-    [SerializeField] private Transform bulletSpawn;
+    public float speed = 500.0f;
+    private float lifetime = 2.0f;
 
-    // Start is called before the first frame update
-    void Start()
+    public void Inintialize()
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        lifetime -= Time.deltaTime;
+        if (lifetime < 0) ObjectPooler.EnqueueObject(this, "Bullet");
     }
 }
