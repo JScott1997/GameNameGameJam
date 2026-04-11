@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public BulletController bulletPrefab;
+    //public BulletController bulletPrefab;
 
     private void Awake()
     {
-        SetupPool();
+        //SetupPool();
     }
 
     private void SetupPool()
     {
-        ObjectPooler.SetupPool(bulletPrefab, 10, "Bullet");
+        //ObjectPooler.SetupPool(bulletPrefab, 10, "Bullet");
     }
 }

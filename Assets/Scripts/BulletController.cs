@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
+/*
+ * SCRIPT OBSOLETE
+ * I am going with raycast bullets instead
+ * will leave this script in project just in case but it wont be used
+ */
+
 public class BulletController : MonoBehaviour
 {
     [SerializeField] private Rigidbody rb;
@@ -10,6 +16,12 @@ public class BulletController : MonoBehaviour
     public float speed = 500.0f;
     [SerializeField] private float lifetime = 2.0f;
     [SerializeField] private float range = 50f;
+
+    private void Update()
+    {
+        lifetime -= Time.deltaTime;
+        if (lifetime < 0) ObjectPooler.EnqueueObject(this, "Bullet");
+    }
 
     public void Inintialize(Transform spawn, Quaternion spreadOffset)
     {
@@ -26,11 +38,5 @@ public class BulletController : MonoBehaviour
         
         //reset lifetime
         lifetime = 2.0f;
-    }
-
-    private void Update()
-    {
-        lifetime -= Time.deltaTime;
-        if (lifetime < 0) ObjectPooler.EnqueueObject(this, "Bullet");
     }
 }
